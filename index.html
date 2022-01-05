@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | WebGLCart2</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGLCart.json", { onProgress: UnityProgress });
+    </script>
+</head>
+<body>
+    <div class="webgl-content">
+        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
+            <div class="webgl-logo"></div>
+            <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+            <div class="title">WebGLCart2</div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script>
+        // Import the functions you need from the SDKs you need
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        //import { } from "https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDiJG-cd-NdhlsdteqAhTM08D84-hfwFCk",
+            authDomain: "webgl-cart-144ce.firebaseapp.com",
+            // databaseURL: "https://webgl-cart-144ce-default-rtdb.firebaseio.com",
+            databaseURL: "https://webgl-cart-144ce-default-rtdb.firebaseio.com",
+            projectId: "webgl-cart-144ce",
+            storageBucket: "webgl-cart-144ce.appspot.com",
+            messagingSenderId: "141008471024",
+            appId: "1:141008471024:web:49597619c1f09647f8d335"
+        };
+
+        // Initialize Firebase
+
+        firebase.initializeApp(firebaseConfig);
+
+            //const app = initializeApp(firebaseConfig);
+    </script>
+
+</body>
+</html>
